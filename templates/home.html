@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fun Fact Selector</title>
-  </head>
-  <body>
-    <form action = "/action_page.php">
-      <select name = "states">
-        <option value = Alaska>Alaska</option>
-      </select><br><br>
-      <input type="submit">
-    </form>
-  </body>
+    <head>
+        <title> County Demographics Lab</title>
+    </head>
+    <body>
+        <form action=".">
+          <select name="State">
+            {{ response_options }}
+          </select>
+          <br><br>
+          <input type="submit">
+      </form>
+      {% if response_state and response_sale is defined %}
+        <p> {{ response_state }} has total retail sale of {{ response_percentage }} </p>
+      {% endif %}
+    </body>
 </html>
