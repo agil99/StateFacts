@@ -28,7 +28,10 @@ def get_average_hispanic_percentage(counties, selected_state):
         if c["State"] == selected_state:
             average_percent_hispanic.append(c["Ethnicities"]["Hispanic or Latino"])
     
-    return str(sum(average_percent_hispanic) / len(average_percent_hispanic))
+    return str(roundFloat(sum(average_percent_hispanic) / len(average_percent_hispanic)))
+
+def roundFloat(num):
+    return int(num*100) / 100.0
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
