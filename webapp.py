@@ -28,7 +28,7 @@ def get_average_hispanic_percentage(counties, selected_state):
         if c["State"] == selected_state:
             average_percent_hispanic.append(c["Population"]["2014 Population"])
     
-    return str(sum(average_percent_hispanic) / len(average_percent_hispanic))
+    return str(sum(average_percent_hispanic))
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
